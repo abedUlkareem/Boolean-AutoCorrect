@@ -32,11 +32,9 @@ class StopwordManager:
         }
 
     def get_stopword_file(self, language):
-        """ إرجاع مسار ملف stopwords بناءً على اللغة المطلوبة """
         return self.languages.get(language.lower(), None)
 
     def load_stopwords(self, language):
-        """ تحميل الكلمات الموقوفة من الملف وتحويلها إلى قائمة """
         file_path = self.get_stopword_file(language)
         if file_path:
             try:
